@@ -1,4 +1,4 @@
-{% set version = '1.1.1' %}
+{% set version = "1.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ragtop_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ragtop/ragtop_{{ version }}.tar.gz
-  sha256: a02c8b3b64e5b5e7a05ea4f690242eed75ae894a73cd143063daa3170e16ec6d
+  sha256: d19aaf3aff00ea6482a6eaa101449d416e4afda1b4cc618b7d0b2eb82a3c74e2
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -39,12 +39,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=ragtop
   license: GPL-2.0-or-later
-  summary: Algorithms to price American and European equity options, convertible bonds and a
-    variety of other financial derivatives. It uses an extension of the usual Black-Scholes
-    model in which jump to default may occur at a probability specified by a power-law
-    link between stock price and hazard rate as found in the paper by Takahashi, Kobayashi,
-    and Nakagawa (2001) <doi:10.3905/jfi.2001.319302>.  We use ideas and techniques
-    from Andersen and Buffum (2002) <doi:10.2139/ssrn.355308> and Linetsky (2006) <doi:10.1111/j.1467-9965.2006.00271.x>.
+  summary: Algorithms to price American and European equity options, convertible bonds and a variety of other financial derivatives. It uses an extension of the usual Black-Scholes model in which jump to default may occur at a probability specified by a power-law link between stock price and hazard rate as found in the paper
+    by Takahashi, Kobayashi, and Nakagawa (2001) <doi:10.3905/jfi.2001.319302>.  We use ideas and techniques from Andersen and Buffum (2002) <doi:10.2139/ssrn.355308> and Linetsky (2006) <doi:10.1111/j.1467-9965.2006.00271.x>.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
